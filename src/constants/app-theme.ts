@@ -62,7 +62,6 @@ export const Brand = {
 
 export const Gradients = {
   hero: 'linear-gradient(135deg, #FF4D94 0%, #E4116B 100%)',
-  walletTile: 'linear-gradient(135deg, #FF8CBC 0%, #F03A8C 100%)',
   nagadCard: 'linear-gradient(135deg, #FFA041 0%, #F2711C 100%)',
   bar: 'linear-gradient(180deg, #FF4D9A 0%, #D10F63 100%)',
   danger: 'linear-gradient(90deg, #FF4757 0%, #F0263B 100%)',

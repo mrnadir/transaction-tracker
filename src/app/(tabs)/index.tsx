@@ -56,6 +56,13 @@ export default function HomeScreen() {
       />
 
       <View style={styles.hero}>
+        <View style={styles.heroDecoration} pointerEvents="none">
+          <Image
+            source={require("@/assets/icons/wallet.svg")}
+            style={styles.decorationWallet}
+            contentFit="contain"
+          />
+        </View>
         <View style={styles.heroTop}>
           <View style={styles.heroSummary}>
             <View style={styles.heroLabelRow}>
@@ -71,9 +78,6 @@ export default function HomeScreen() {
             >
               {formatTaka(today.total)}
             </Text>
-          </View>
-          <View style={styles.walletTile} pointerEvents="none">
-            <Icon name="wallet" size={44} color="#FFFFFF" />
           </View>
         </View>
         <View style={styles.providerRow}>
@@ -196,18 +200,23 @@ const styles = StyleSheet.create({
     flex: 1,
     gap: 14,
   },
-  walletTile: {
-    width: 84,
-    height: 84,
-    borderRadius: 24,
+  heroDecoration: {
+    position: "absolute",
+    top: -70,
+    right: -70,
+    width: 180,
+    height: 180,
+    borderRadius: 90,
+    backgroundColor: "rgba(255,255,255,0.12)",
     alignItems: "center",
     justifyContent: "center",
-    borderWidth: 1,
-    borderColor: "rgba(255,255,255,0.35)",
-    backgroundColor: "#FF6FA8",
-    experimental_backgroundImage: Gradients.walletTile,
-    boxShadow: "0 8px 20px rgba(120, 0, 50, 0.35)",
-    transform: [{ rotate: "-8deg" }],
+    paddingTop: 58,
+    paddingRight: 58,
+  },
+  decorationWallet: {
+    width: 60,
+    height: 53,
+    transform: [{ rotate: "-12deg" }],
   },
   heroLabelRow: {
     flexDirection: "row",
